@@ -1,0 +1,12 @@
+ADD_EXECUTABLE(curltest main.c)
+
+#INCLUDE_DIRECTORIES(/usr/include)
+#TARGET_LINK_LIBRARIES(curltest curl)
+
+FIND_PACKAGE(CURL) # 系统预定义的find<name>.cmake模块都会定义_FOUND, _INCLUDE_DIR/_INCLUDES, _LIBRARY/_LIBRARIES: 通过判断系统是否提供了 curl 库来决定程序是否支持 curl 功能
+IF(CURL_FOUND)
+    INCLUDE_DIRECTORIES(${CURL_INCLUDE_DIR})
+    TARGET_LINK_LIBRARIES(curltest ${CURL_LIBRARY})
+ELSE(CURL_FOUND)
+    MESSAGE(FATAL_ERROR ”CURL library not found”)
+ENDIF(CURL_FOUND)
