@@ -8,3 +8,5 @@
 **/compile_commands.json
 **/CTestTestfile.cmake
 **/*.log
+**/cmake-build-debug
+**/build
