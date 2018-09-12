@@ -83,6 +83,52 @@ def _introduction_build_in_func():
     """
 
 
+def _introduction_constants():
+    pass
+    """
+    NotImplemented: 用于被特定二元方法，被返回的特殊值
+    Ellipsis：　用户自定义的容器类型［扩展ｓｌｉｃｉｎｇ语法］
+    __debug__
+    
+    site模块［python包安装的位置Site-specific configuration hook］:　解析器初始话的时候，被使用
+        quit
+        exit
+        license
+    """
+
+
+def _introduction_types():
+    pass
+    """numerics数字, sequences序列, mappings映射, classes类, instances实例 and exceptions异常.
+    真值比较：__bool__(), __len__()
+    Boolean操作
+    比较: 等于[ __eq__(), __lt__(), __le__(), __gt__(), __ge__()], is [object identity: id(object值相同,则is是相同的)]
+    
+    numerics数字: int[Booleans 是int的子类, bit操作], float, complex
+    Iterator Types: __iter__(), __next__()
+    Sequence Types — list, tuple, range
+    Text Sequence Type — str: 单引号,双引号,三引号[printf-style String Formatting]
+    Binary Sequence Types — bytes, bytearray, memoryview
+    Set Types — set, frozenset
+    Mapping Types — dict
+    Context Manager Types: with 声明[__enter__()/__exit__()方法]
+    
+    Modules:只开放了name属性, 每个模块都有特殊属性 __dict__
+    Classes and Class Instances:
+    Functions
+    Methods
+    Code Objects
+    Type Objects
+    The Null Object
+    The Ellipsis Object
+    The NotImplemented Object
+    Boolean Values
+    Internal Objects
+    
+    特殊的属性
+    __mro__: 查找基类
+    __subclasses__(): 查找子类
+    """
 
 
 def test_buidin_func():
@@ -130,21 +176,40 @@ def test_buidin_func():
     print('\n')
 
 
-def _introduction_for_module():
-    import unicodedata
+def _introduct_Exceptions():
+    pass
     """
-    the Unicode Character Database (UCD):处理Unicode字符串，需要确保所有字符串在底层有相同的表示
-    unicodedata.normalize('NFC', s2) 测试字符类的工具函数
+    Base classes: BaseException / Exception / ArithmeticError除0, 溢出等 / BufferError 操作buff / LookupError 找key,index, mapping等
+    Concrete exceptions 常用:
+    OS exceptions: OSError的子类
+    
+    Warnings 警告:
     """
+
+
+def TextProcessingServices():
+    pass
+    '''不同的模块
+    string — 常用字符串操作: 常量/字符串定制格式化[format/Template]/ 第一个字符大写
+    re — Regular expression operations: 语法[re.compile("规则")变为pattern]/ several functions, constants, and an exception / 对象[正则/Match/]
+    difflib — Helpers for computing deltas : 对比字符串的异同
+    textwrap — Text wrapping and filling: 连接函数[用来填充词/ 缩进 对齐]
+    unicodedata — Unicode Database: the Unicode Character Database (UCD):处理Unicode字符串，需要确保所有字符串在底层有相同的表示, unicodedata.normalize('NFC', s2) 测试字符类的工具函数
+    stringprep — Internet String Preparation 互联网字符集[判断字符是不是在一个table内]
+    readline — GNU readline interface: 方便Python编译器 读/写 历史文件[Init file / Line buffer / History file / History list / Startup hooks / Completion]
+    rlcompleter — Completion function for GNU readline
+    '''
 
 
 def main():
     # breakpoint()
     # import sys
     # sys.breakpointhook()/
-    import math
-    math.log(11, 9)
-    test_buidin_func()
+    # test_buidin_func()
+    # print(__dict__)
+    import stringprep
+    stringprep.b1_set
+    pass
 
 
 if __name__ == '__main__':
