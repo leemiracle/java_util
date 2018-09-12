@@ -1,6 +1,8 @@
 import hello
 import fib
 
+import faulthandler
+
 if __name__ == '__main__':
     #  cookbook:  https://python3-cookbook.readthedocs.io/zh_CN/latest/c15/p01_access_ccode_using_ctypes.html
     #  https://en.wikibooks.org/wiki/Python_Programming/Extending_with_C
